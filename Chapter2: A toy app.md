@@ -87,24 +87,14 @@ Bây giờ, chúng ta có thể sẵn sàng tạo demo app rồi.
 Bước đầu tiên khi tạo một web application đó là tạo một _data model_, biểu diễn các cấu trúc cần thiết trong ứng dụng của chúng ta. Trong trường hợp này, chúng ta sẽ tạo nên một microblog, với yêu cầu đơn giản chỉ có các users và các microposts. Do vậy, chúng ta sẽ bắt đầu với việc định nghĩa model cho _users_ của app ( [Section&nbsp;2.1.1](/book/toy_app#sec-modeling_demo_users)), sau đó thêm model cho _microposts_ ( [Section&nbsp;2.1.2](/book/toy_app#sec-modeling_demo_microposts)).
 
 
-
-
-
-
-
-
-
-
-
-
 ### [2.1.1 A toy model for users](/book/toy_app#sec-modeling_demo_users)
-
-There are as many choices for a user data model as there are different registration forms on the web; we’ll go with a distinctly minimalist approach. Users of our toy app will have a unique `integer` identifier called `id`, a publicly viewable `name` (of type `string`), and an `email` address (also a `string`) that will double as a username. A summary of the data model for users appears in [Figure&nbsp;2.2](/book/toy_app#fig-demo_user_model).
+Chúng ta có nhiều lựa chọn cho user data model, cũng giống như việc có nhiều loại forms đăng ký ở trên web vậy. Chúng ta sẽ tiếp cận bằng một cách đơn giản, rõ ràng nhất. Users trong app của chúng ta sẽ có một trường định danh duy nhất là `id` (kiểu `integer`), trường `name` (kiểu `string`), trường `email` (cũng kiểu `string`) và được sử dụng như username. Cấu trúc cụ thể của users data model được miêu tả ở [Figure&nbsp;2.2](/book/toy_app#fig-demo_user_model).
 
  ![demo_user_model](https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_3rd_edition/images/figures/demo_user_model.png)
 Figure 2.2: The data model for users.
 
-As we’ll see starting in [Section&nbsp;6.1.1](/book/modeling_users#sec-database_migrations), the label `users` in [Figure&nbsp;2.2](/book/toy_app#fig-demo_user_model) corresponds to a _table_ in a database, and the `id`, `name`, and `email` attributes are _columns_ in that table.
+Như chúng ta thấy, bắt đầu từ [Section&nbsp;6.1.1](/book/modeling_users#sec-database_migrations), label `users` ở
+[Figure&nbsp;2.2](/book/toy_app#fig-demo_user_model) tương ứng với _table_ trong database, và các thuộc tính `id`, `name`, `email` tương ứng với _columns_ trong table đó.
 
 ### [2.1.2 A toy model for microposts](/book/toy_app#sec-modeling_demo_microposts)
 
